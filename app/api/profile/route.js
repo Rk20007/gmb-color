@@ -29,6 +29,7 @@ export async function GET(req) {
     // Posts where userId is same STRING
     const posts = await Post.find({ userId }).sort({ createdAt: -1 });
 
+    
     return Response.json(
       {
         message: "Profile details fetched successfully",
